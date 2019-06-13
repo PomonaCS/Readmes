@@ -17,7 +17,7 @@
 
 * Stacks - A data structure like a stack of plates where only the top element can be modified, either by peeking at it, removing it, or adding another element on top of it (See 1.3 pg. 127 in the textbook, and [Java documentation](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html))
 * ActionListener - An interface that allows for the creation of objects that respond to user input and produce a signal (See https://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html for Java documentation)
-* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See appendix A for more on postfix notation.
+* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See **Appendix A - Postfix Notation** for more on postfix notation.
 
 ## Description
 
@@ -91,7 +91,7 @@ would then push the number, `3`, onto the stack. The next number is a `5`. We wo
 the stack as well. Finally, since the user clicks `+` we would pop the two numbers off the stack, add them to
 get 8, and then push 8 back onto the stack.
 
-See Appendix B - Calculator Specifics for more on what each button should do and how your calculator should operate. Read through this carefully.
+See **Appendix B - Calculator Specifics** for more on what each button should do and how your calculator should operate. Read through this carefully.
 
 ### `StateTest`
 `StateTest` is a `JUnit` test class for the `State` class. It is partially written for you. You must finish writing
@@ -106,7 +106,7 @@ implemented. Feel free to add additional unit tests to the `StateTest` class to 
 
 3. Begin working on the `DigitButtonListener` based on the provided classes. Make sure that this code communicates with the other classes effectively.
 
-4. Move on to the `State` class, which contains the brunt of the work for this assignment. Make sure that your code complies with all the guidelines in 'Appendix B - Calculator Specifics.'
+4. Move on to the `State` class, which contains the brunt of the work for this assignment. Make sure that your code complies with all the guidelines in **Appendix B - Calculator Specifics**.
 
 5. Implement your own operation. Possibilities include a squaring button, factorial, or x^y. You should add the new button so that it looks
 nice by modifying the button layout code in the `Calculator` class, add an appropriate listener (created from `OpButtonListener` if you like), and make sure that the state

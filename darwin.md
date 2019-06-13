@@ -48,7 +48,7 @@ actions is completed, the turn for that creature ends, and some other creature g
 creature has had a turn, the process begins all over again with each creature taking a second turn, and so on.
 The goal of the game is to infect as many creatures as possible to increase the population of your own species.
 
-See 'Appendix A - Species Programming' for more on how Instruction lists inform creature behavior. Make sure you read through and undestand this before coding the `Species` class.
+See **Appendix A - Species Programming** for more on how Instruction lists inform creature behavior. Make sure you read through and undestand this before coding the `Species` class.
 
 There are several presupplied creature files:
 
@@ -92,7 +92,7 @@ This class handles all of the graphics for the simulation. This class is already
 
 ### `Species`
 This class represents a species, and provides operations for reading in a species description from a file and
-for working with the programs that each creature executes. You must fill in some basic methods, as well as a constructor that reads in the instructions from the .txt files in the **Creatures** folder. See 'Appendix A - Species Programming' for more on how Creatures should behave based on their species.
+for working with the programs that each creature executes. You must fill in some basic methods, as well as a constructor that reads in the instructions from the .txt files in the **Creatures** folder. See **Appendix A - Species Programming** for more on how Creatures should behave based on their species.
 
 ### `Creature`
 Objects of this class represent individual creatures, along with operations for creating new creatures and for
