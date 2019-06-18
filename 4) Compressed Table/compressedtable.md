@@ -38,21 +38,47 @@ on to the next:
 
 ![Compression](compression.png "Compression")
 
-This assignment asks you to design a class which will represent one of these compressed tables. We have provided you with a lot of code here, but you will find that much of the code you must write is
-quite tricky. This project will require you to be very careful in developing the code for the methods. Look
-carefully at the provided code and design your methods very carefully. In particular, be sure to test your
-code carefully as it is developed as you will likely make several logical errors if you are not extremely careful.
-This is your most complex program yet. You should start early on this assignment and make a very
-complete design for your program before you ever sit down at the computer to program.
+This assignment asks you to apply this technique to a drawing program, where individual pixels can be changed. The program should act like you would expect a drawing program to, but it will store the information in one of these tables.
+
+![Drawing Grid](drawinggrid.png "Drawing Grid")
+
 
 
 ## Classes
 
+### `RowOrderedPosn`
+
+![Drawing Grid](compressedtablemockup.png "Drawing Grid")
+
+The `RowOrderedPosn` class represents a single entry in a row-ordered table. The constructor takes four
+parameters: the row of the entry in the table, the column of the entry in the table, the total number of rows
+in the table, and the total number of cols in the table. Thus,
+
+    new RowOrderedPosn(0, 0, 5, 3)
+
+represents the entry at location (0, 0) i.e. the upper-left corner in a table with 5 rows and 3 columns. This
+class also contains methods to return the next position after a given one and to compare two positions in a
+table. This class is already implemented for you.
+
+### `DrawingPanel`
+
+This class is responsible for displaying the two-dimensional grid of colored rectangles. It is also responsible
+for any mouse actions performed on the two-dimensional grid. This class is already implemented for you.
+
+### `GridTest`
+
+This class creates an applet that lets the user manipulate a grid of rectangles that form an image. The user interacts with the application by clicking on a color button to set the current color and then clicking
+on rectangles in the grid to change the colors of individual rectangles. Along with the color buttons there is a button that will display the results of sending the toString method to the object of type
+`CompressedTable` to show the current state of the representation. This can help you as you attempt to
+debug your `CurDoublyLinkedList` and `CompressedTable` classes. This class is already implemented for
+you.
+
+### `TwoDTable`
+This interface represents a two-dimensional table.
+
 ### `CurDoublyLinkedList`
 
-`CurDoublyLinkedList` extends `DoublyLinkedList` from Bailey’s `structure5` package. (You can find
-the code for `DoublyLinkedList` under the Bailey `structure5` source code link on the Documentation and
-Handouts page of the course website). Think carefully about what it means for one class to extend another.
+`CurDoublyLinkedList` (short for 'extends the `DoublyLinkedList` class that you implemented.  Think carefully about what it means for one class to extend another.
 The `CurDoublyLinkedList` class should support all of the old methods of the `List` interface. In addition
 the new class should support the following methods:
 
@@ -71,7 +97,6 @@ This is a **`JUnit`** test class for the `CurDoublyLinkedList` class. There are 
 You must finish this class by adding at least one test for each method in the `CurDoublyLinkedList` class.
 The more thorough your tests, the easier time you will have when you implement the `CompressedTable`
 class. Be sure to test all of the *edge* (special) cases.
-
 
 ### `CompressedTable`
 
@@ -108,33 +133,7 @@ at the demo program to see why.)
 
 Try to draw examples of this logic with several sample lists so that you can understand how it works!
 
-### `RowOrderedPosn`
 
-The `RowOrderedPosn` class represents a single entry in a row-ordered table. The constructor takes four
-parameters: the row of the entry in the table, the column of the entry in the table, the total number of rows
-in the table, and the total number of cols in the table. Thus,
-
-    new RowOrderedPosn(0, 0, 5, 3)
-
-represents the entry at location (0, 0) i.e. the upper-left corner in a table with 5 rows and 3 columns. This
-class also contains methods to return the next position after a given one and to compare two positions in a
-table. This class is already implemented for you.
-
-### `DrawingPanel`
-
-This class is responsible for displaying the two-dimensional grid of colored rectangles. It is also responsible
-for any mouse actions performed on the two-dimensional grid. This class is already implemented for you.
-
-### `GridTest`
-
-This class creates an applet that lets the user manipulate a grid of rectangles that form an image. The user interacts with the application by clicking on a color button to set the current color and then clicking
-on rectangles in the grid to change the colors of individual rectangles. Along with the color buttons there is a button that will display the results of sending the toString method to the object of type
-`CompressedTable` to show the current state of the representation. This can help you as you attempt to
-debug your `CurDoublyLinkedList` and `CompressedTable` classes. This class is already implemented for
-you.
-
-### `TwoDTable`
-This interface represents a two-dimensional table.
 
 
 ## Getting started
@@ -156,11 +155,13 @@ then stop and test it instead of writing all of the code for a class and only af
 better is to write all of your test in `JUnit` before you write the code and then slowly turn the red to
 green!
 
-5. To ensure compatibility with the auto-grader, update the build path of the project and include
-`AutograderCompTest.jar` by selecting the menu `Project → Properties → Java Build Path → Libraries→ Add JARs`. Initialize an instance of `AutograderCompTest` in a `main` method and call
-`testCurDoublyLinkedList()` or `testCompressedTable()`. Note that this test class only checks compatibility,
-not correctness.
+## Helpful Considerations
 
+* Bug hunting - This is a complex project where many things can go wrong. It is more likely than not that there will be large bugs, even late into the project. Try to identify where these bugs are coming from - often, there is an issue with `CurDoublyLinkedList` that is causing them but it is difficult to see as you are working on an entirely different piece. How can we test incrementally to try to stop these bugs from occurring? What's a good way to identify the source of a problem?
+
+* Understanding what's given - As in the other projects, a significant amount of code has been provided to you. Try to go through it and understand how it can help you, and through this isolate what you need to focus on. After `CurDoublyLinkedList`, there is really only a couple more methods for you to implement. How can the provided classes and methods help you write these? In particular, I recommend looking at the 'find' method in 'CompressedTable' and the methods in 'RowOrderedPosn'.
+
+* Why a linked list? - This assignment is a great example of how data structures like LinkedLists can be helpful in the real world. What are the advantages of a DoublyLinkedList in this scenario? Why would this project not work with an ArrayList? What are some other potential applications of LinkedLists?
 
 ## Grading
 
@@ -177,7 +178,7 @@ You will be graded based on the following criteria:
 | JUnit tests for all methods in `CurDoublyLinkedList` | 2      |
 | Appropriate comments (including JavaDoc) | 2      |
 | General correctness                      | 2      |
-| Style and Formatting                     | 2      |
+| [Style and formatting](https://github.com/pomonacs622018f/Handouts/blob/master/style_guide.md)                      | 2      |
 | Submitted correctly                      | 1      |
 | **Total**                                | **20** |
 | Extra Credit - efficiency                | 2      |
@@ -190,7 +191,7 @@ NOTE: Code that does not compile will not be accepted! Make sure that your code 
  Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to set the
 `“ec”` field to true if you did extra credit.
 
- ## Extra credit
+## Extra credit
 
 As you add more information to the table, you will notice that the table is no longer as efficient in space, because several consecutive entries may have the same values. Make the representation more efficient by dropping later values if they can be subsumed by earlier ones.
 
@@ -201,7 +202,6 @@ For example, the list
 can be replaced by the much simpler list:
 
 ![Simple](simple.png "Simple")
-
 
 For extra credit, modify the `updateInfo` method of `CompressedTable` to eliminate consecutive items
 with the same value. The amount of extra credit received will be proportional to the efficiency of your
@@ -220,3 +220,10 @@ of information, leading to the need to store information on 1,000,000 pixels per
 creates serious problems for storing and transmitting these images. However most images tend to have many
 contiguous groups of pixels, each of which are the same color. We can take advantage of this by trying to
 encode information about the entire block in a relatively efficient manner.
+
+We have provided you with a lot of code here, but you will find that much of the code you must write is
+quite tricky. This project will require you to be very careful in developing the code for the methods. Look
+carefully at the provided code and design your methods very carefully. In particular, be sure to test your
+code carefully as it is developed as you will likely make several logical errors if you are not extremely careful.
+This is your most complex program yet. You should start early on this assignment and make a very
+complete design for your program before you ever sit down at the computer to program.
