@@ -26,6 +26,9 @@ Be sure to read over the entirety of this document and the code, including the c
 The correctness of the assignments in this class will be automatically verified. For this reason, you must follow all naming conventions specified in this assignment.
 
 ## Classes
+
+![Calculator Mockup](coinsquaremockup.png)
+
 ### `Coin`
 The Coin class represents a single coin. This class is already implemented for you. This class contains several useful methods for creating and moving the coin, which will be useful for the assignment.
 
