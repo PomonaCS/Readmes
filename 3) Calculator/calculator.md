@@ -15,9 +15,9 @@
 
 ## Key Terms and Concepts
 
-* Stacks - A data structure like a stack of plates where only the top element can be modified, either by peeking at it, removing it, or adding another element on top of it (See 1.3 pg. 127 in the textbook, and [Java documentation](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html))
+* Stacks - A data structure like a stack of plates where only the top element can be modified, either by peeking at it, removing it, or adding another element on top of it (See 1.3 pg. 127 in the textbook)
 * ActionListener - An interface that allows for the creation of objects that respond to user input and produce a signal (See https://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html for Java documentation)
-* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See **Appendix A - Postfix Notation** for more on postfix notation.
+* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See **Appendix A - Postfix Notation** for more on postfix notation and lecture slides.
 
 ## Description
 
@@ -83,7 +83,7 @@ must also keep track of the display window of the calculator (a `JTextField` tha
 of the calculator).
 
 The most important feature of the `State` is its stack, which represents those numbers stored on the
-calculator. Use `java.util.ArrayDeque` rather than writing your own stack.
+calculator. Use the `Stack` class in the `edu.princeton.cs.algs4` package.
 
 Let's look at how you would evaluate the example from earlier (`3`, `enter`, `5`, `+`). First, you must keep track
 of the number being constructed. When the `enter` button is clicked, you know this number is complete. We
@@ -146,12 +146,12 @@ NOTE: Code that does not compile will not be accepted! Make sure that your code 
 
 ## Extra credit
 
-If you are interested in extra credit, I suggest that you add a decimal point button so that your calculator
+If you are interested in extra credit, we suggest that you add a decimal point button so that your calculator
 can handle floating point numbers. Be sure to check that the user does not input an illegal number (e.g., with two decimal points). Possibilities for new buttons with this include square root, trig functions (e.g.,
 sin, cos, tan, etc.), inverse trig functions, x^y, e^x, factorial,  inverses, or logarithms.
 
 See the `Math` class in package `java.lang` for a list of available mathematical functions in Java. Make
-sure the basic functions of your calculator are working correctly before moving on to extra credit. Please set the `ec` field in your `asg05.json` file to true so that
+sure the basic functions of your calculator are working correctly before moving on to extra credit. Please set the `ec` field in your `json` file to true so that
 we can look out for that.
 
 ### Appendix A - Postfix
