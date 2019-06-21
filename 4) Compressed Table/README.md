@@ -7,15 +7,15 @@
 
 ## Learning Goals
 
-* Practice implementing and using a doubly linked list data structure.
+* Practice extending and using a doubly linked list data structure.
 * Gain experience designing and implementing a non-trivial algorithm.
 * Gain experience debugging complex and troublesome code.
-* Gain more experience using `JUnit`.
+* Gain even more experience using `JUnit`.
 
 ## Key Terms and Concepts
 
-* `DoublyLinkedList` - A list consisting of nodes that each contain an item and a pointer to the node ahead and behind them. This means the list has minimal structure and instead consists of individual elements strung together. (See 1.3 pg. 142-153 in the textbook and lecture slides [] for more)
-* `Association` - A data structure containing a key and a value together. This allows for two pieces of data to be "associated" and referenced together, and can be useful for storing certain information. (See lecture slides [] for more)
+* `DoublyLinkedList` - A list consisting of nodes that each contain an item and a pointer to the node ahead and behind them. This means the list has minimal structure and instead consists of individual elements strung together. (See 1.3 pg. 142-153 in the textbook and the lecture slides for more).
+* `Association` - A data structure containing a key and a value together. This allows for two pieces of data to be "associated" and referenced together, and can be useful for storing certain information. 
 * Compression - A very useful technique where large amounts of data is efficiently stored to reduce the space it takes up, through encoding or other methods. (See 5.5 pg. 810 in the textbook and **Appendix A - Compression** for more)
 
 ## Description
