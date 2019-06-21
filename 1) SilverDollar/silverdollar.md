@@ -1,8 +1,8 @@
 # Assignment 01 - Graphics Silver Dollar Game
 
 ## Important Dates
-* Release Date: September 9, 2018
-* Due Date: September 16, 2018
+* Release Date: September 10, 2019
+* Due Date: September 17, 2019
 
 ## Learning Goals
 
