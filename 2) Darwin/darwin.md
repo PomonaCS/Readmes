@@ -16,10 +16,10 @@ representational details.)
 
 ## Key Terms and Concepts
 
-* `JUnit` - A unit testing framework where tests are written for each method in a class, each with their own assertions about what the result should be in order to test cases (See [documentation](https://junit.org/junit5/) for more, and [here](https://www.qualitestgroup.com/resources/knowledge-center/how-to-guide/set-junit-eclipse/) for information about JUnit and eclipse)
-* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook, and [Java documentation](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html))
-* `Matrix` - A grid made of rows and columns, in this case implemented by ArrayLists of ArrayLists
-* Modular decomposition - In this case, the concept of breaking a complex coding problem into individual parts which each serve their own purposes and interlock with each other
+* `JUnit` - A unit testing framework where tests are written for each method in a class, each with their own assertions about what the result should be in order to test cases (See [documentation](https://junit.org/junit5/) for more, and [here](https://www.qualitestgroup.com/resources/knowledge-center/how-to-guide/set-junit-eclipse/) for information about JUnit and eclipse).
+* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook).
+* `Matrix` - A grid made of rows and columns, in this case implemented with ArrayLists of ArrayLists.
+* Modular decomposition - In this case, the concept of breaking a complex coding problem into individual parts which each serve their own purposes and interlock with each other.
 
 
 ## Description
@@ -48,13 +48,13 @@ actions is completed, the turn for that creature ends, and some other creature g
 creature has had a turn, the process begins all over again with each creature taking a second turn, and so on.
 The goal of the game is to infect as many creatures as possible to increase the population of your own species.
 
-See **Appendix A - Species Programming** for more on how Instruction lists inform creature behavior. Make sure you read through and undestand this before coding the `Species` class.
+See **Appendix A - Species Programming** for more on how `Instruction` lists inform creature behavior. Make sure you read through and undestand this before coding the `Species` class.
 
 There are several presupplied creature files:
 
 `Food`: This creature spins in a square but never infects anything. Its only purpose is to serve as food for
-other creatures. As Nick Parlante explains, “the life of the Food creature is so boring that its only hope
-in life is to be eaten by something else so that it gets reincarnated as something more interesting.”
+other creatures. As Nick Parlante explains, "the life of the Food creature is so boring that its only hope
+in life is to be eaten by something else so that it gets reincarnated as something more interesting."
 
 `Hop`: This creature just keeps hopping forward until it reaches a wall. Not very interesting, but it is useful
 to see if your program is working.
@@ -64,7 +64,7 @@ to see if your program is working.
 `Rover`: This creature walks in straight lines until it is blocked, infecting any enemy creature it sees. If it
 can’t move forward, it turns.
 
-You can also create your own creatures by creating a data file in the format described above.
+You should also create your own creature by creating a data file in the format described in Appendix A.
 
 ## Classes
 
@@ -81,7 +81,7 @@ should use without modification: `Instruction`, `Position`, and `WorldMap`. Make
 
 
 ### `Instruction`
-This simple class represents one instruction out of the Species’s instruction set. This class is already implemented
+This simple class represents one instruction out of the `Species`’s instruction set. This class is already implemented
 for you.
 
 ### `Position`
@@ -92,7 +92,7 @@ This class handles all of the graphics for the simulation. This class is already
 
 ### `Species`
 This class represents a species, and provides operations for reading in a species description from a file and
-for working with the programs that each creature executes. You must fill in some basic methods, as well as a constructor that reads in the instructions from the .txt files in the **Creatures** folder. See **Appendix A - Species Programming** for more on how Creatures should behave based on their species.
+for working with the programs that each creature executes. You must fill in some basic methods, as well as a constructor that reads in the instructions from the .txt files in the **Creatures** folder. See **Appendix A - Species Programming** for more on how `Creature`s should behave based on their species.
 
 ### `Creature`
 Objects of this class represent individual creatures, along with operations for creating new creatures and for
@@ -135,10 +135,10 @@ method in that class and verify that all of the methods work**.
 one creature of that species. Write a loop that lets the single creature take 10 or 20 turns.
 
 7. Go back to `Creature` and implement more of the `takeOneTurn` method. Test as you go – implement
-an instruction or two, and verify that a Creature will behave correctly, using your partially written
+an instruction or two, and verify that a `Creature` will behave correctly, using your partially-written
 `Darwin` class.
 
-8. Finish up the `Darwin` class. Populate the board with creatures of different species (I suggest about
+8. Finish up the `Darwin` class. Populate the board with creatures of different species (We suggest about
 10 of each kind of creature) and make your main simulation loop iterate over the creatures, giving
 each a turn. The class should create creatures for the species given as command line arguments to the
 program when you run it. See `Darwin.java` for more details. Run the simulation for several hundred
@@ -155,11 +155,11 @@ correctly. Test `ifenemy`, `infect`, etc.
 
 ## Helpful Considerations
 
-* Incremental testing - One of the main advantages of segmented programs, especially object oriented ones, is their ability to be developed and tested piece by piece. Test classes individually, not altogether. This will help you verify that each piece works and avoid a situation where some unknown is broken. What does it take to convince myself my code is correct? What edge cases should I make sure to test? How might something break?
+* Incremental testing - One of the main advantages of segmented programs, especially object oriented ones, is their ability to be developed and tested piece by piece. Test classes individually, not altogether. This will help you verify that each piece works and avoid a situation where some unknown is broken. What does it take to convince yourself that your code is correct? What edge cases should you make sure to test? How might something break?
 
-* Putting it together - This code has many dependencies and moving pieces. This can make it more confusing to understand, but will make it much easier to test and create. Which classes should handle which tasks? How does each piece fit together? Which classes are hidden, and which ones use each other? Which method handles what action?
+* Putting it together - This assignment has many dependencies and moving pieces. This can make it more confusing to understand, but will make it much easier to test and create. Which classes should handle which tasks? How does each piece fit together? Which classes are used by the user and which act as helpers for others? Which method handles what action?
 
-* Writing adaptable code - One big advantage of this program is that more species can be added without hard coding them in. All you need to do is write a .txt file which defines behavior. This means that your code essentially reads other simple. How does this benefit your program? Why might this be a helpful general design principle?
+* Writing adaptable code - One big advantage of this program is that more species can be added without hard coding them in. All you need to do is write a .txt file which defines their behavior. This means that your code essentially reads other simple code. How does this benefit your program? Why might this be a helpful general design principle?
 
 ## Grading
 
@@ -191,7 +191,7 @@ you can find significant periods of time in which you can work together.
 2. Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to set the
 `“ec”` field to true if you did extra credit.
 
-3. You must include in your submission a species of your own design in a file named it `myspecies.txt`.
+3. You must include in your submission a species of your own design in a file named it `lastNameOfFirstStudent_lastNameOfSecondStudent.txt`.
 It can be as simple or as complex as you like, but must use only the instructions specified above for
 creatures. The color must also be one of those specified in `WorldMap`. We will pit your creatures against
 each other to watch them battle for survival! Prizes will be awarded! Be sure to include your name in
