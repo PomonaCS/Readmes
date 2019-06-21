@@ -2,21 +2,21 @@
 
 ## Important Dates
 
-* Release Date: September 23, 2018
-* Due Date: September 30, 2018
+* Release Date: October 22, 2019
+* Due Date: October 29, 2019
 
 ## Key Terms and Concepts
 
-* File I/O - Methods for handling input (I) and output (O) to different files. Allows us to read and modify various files through different systems. (See 1.1 pg. 36 in the textbook, **Apendix A - File I/O in Java**, and [here](https://www.tutorialspoint.com/java/java_files_io.htm) for more).
-* Mergesort - A O(n log n) method of sorting where a set of data is split into smaller chunks, sorted, and then merged back together by doing simple comparisons while iterating through the smaller sorted sets (See 2.2 pg. 270 - 288 in the textbook for more).
-* Iterator - An interface that allows traversal through a set of data. Relies on hasNext() (which sees if there is another element left) and next() (which returns the next element) methods (See 1.1 pg. 100 and various other examples in the textbook and [here](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) for more)
+* File I/O - Methods for handling input (I) and output (O) to different files. Allows us to read and modify various files through different systems. (See lecture slides, 1.1 pg. 36 in the textbook, **Apendix A - File I/O in Java**, and [here](https://www.tutorialspoint.com/java/java_files_io.htm) for more).
+* Mergesort - A divide and conquer algorithm for sorting of O(n log n) complexity. The data to be sorted are split into smaller chunks, sorted, and then merged back together by doing simple comparisons while iterating through the smaller sorted sets (See lecture slides and  2.2 pg. 270 - 288 in the textbook for more).
+* Iterator - An interface that allows traversal through a set of data. Requires the `hasNext()` (which sees if there is another element left) and `next()` (which returns the next element) methods (See lecture notes, 1.1 pg. 100 and various other examples in the textbook and [here](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) for more)
 
 ## Learning Goals
 
 * Practice reading from and writing to files.
-* Practice using Java exceptions and try/catch statements
-* Practice using an Iterator to iterate over a collection of Strings
-* Implement a divide-and-conquer algorithm
+* Practice using Java exceptions and try/catch statements.
+* Practice using an Iterator to iterate over a collection of Strings.
+* Implement a divide-and-conquer algorithm.
 
 ## Description
 
@@ -99,8 +99,8 @@ Java file I/O. For more on file I/O, you can also see **Appendix A - File I/O in
 
 1. Follow the same steps with the first lab/assignment to clone the github repository for this assignment.
 
-2. You will also need a directory in which to put the files to be sorted. We suggest you create a directory called `sorting_run` in your project directory. In that directory put a file containing a copy of King’s
-“I have a dream” speech. It is in a file named “Ihaveadream.txt” and is in with files from last week’s assignment. Be sure to name these exactly as given here, and make sure the directory `sorting_run` is
+2. You will also need a directory in which to put the files to be sorted. We suggest you create a directory called `sorting_run` in your project directory. In that directory put a file containing a copy of King's
+“I have a dream” speech. It is in a file named "Ihaveadream.txt" and is in with files from last week’s assignment. Be sure to name these exactly as given here, and make sure the directory `sorting_run` is
 in the same directory as the `.class` files from your program. (If not, then the program won’t find them
 and it will crash!) See the main method of `OnDiskSort` for the names. Note that we may test your
 code using a different directory for temporary files, so your code shouldnt use the name sorting run
@@ -149,7 +149,7 @@ method, just rename is to something like `mergeFilesLinear`).
 
 ### Appendix A - File I/O in Java:
 
-For those that haven’t had any file I/O experience in Java, we’ll give a brief intro here, but also take a look at the streams cheat sheet available off of the course Documentation page. You can also look
+For those that haven't had any file I/O experience in Java, we’ll give a brief intro here, but also take a look at the streams cheat sheet available off of the course Documentation page. You can also look
 up information about the classes seen in the code and discussed here via the Java libraries link there. For most I/O, you’ll need to `import java.io.*`.
 The two main classes you’ll be concerned with when doing file I/O in java are `BufferedReader` for
 reading data and `PrintWriter` for writing data. To read data, you can create a new reader by:
@@ -178,5 +178,4 @@ directory!) If you ever want to know where you are when you’re in the `Termina
 (for *print working directory*). You can try it out by just typing `pwd` and hitting return (though that
 won’t work in `Eclipse` – you must be in the `Terminal`)!.
 Rather than hard-coding in a file or directory, you can also pop up a dialog box and let the user choose
-the file. We did that with last week’s assignment. In fact, the startup code given to you in the main
-class of `TextGenerator` is a good example of how to use file input.
+the file. 
