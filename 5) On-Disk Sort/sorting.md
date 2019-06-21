@@ -7,9 +7,9 @@
 
 ## Key Terms and Concepts
 
-* File I/O
-* Mergesort
-*
+* File I/O - Methods for handling input (I) and output (O) to different files. Allows us to read and modify various files through different systems. (See 1.1 pg. 36 in the textbook, **Apendix A - File I/O in Java**, and [here](https://www.tutorialspoint.com/java/java_files_io.htm) for more).
+* Mergesort - A O(n log n) method of sorting where a set of data is split into smaller chunks, sorted, and then merged back together by doing simple comparisons while iterating through the smaller sorted sets (See 2.2 pg. 270 - 288 in the textbook for more).
+* Iterator - An interface that allows traversal through a set of data. Relies on hasNext() (which sees if there is another element left) and next() (which returns the next element) methods (See 1.1 pg. 100 and various other examples in the textbook and [here](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) for more)
 
 ## Learning Goals
 
@@ -45,15 +45,17 @@ follow all naming conventions specified in this assignment.*
 ## Classes
 
 ### `MergeSort`
-Implementation of the Mergesort algorithm
+Implementation of the Mergesort algorithm. This class has already been implemented for you.
 ### `QuickSort`
-Implementation of the Quicksort algorithm
+Implementation of the Quicksort algorithm. This class has already been implemented for you.
 ### `Sorter`
 An interface for sorting algorithms. Implemented by the `MergeSort` and `Quicksort`classes.
 ### `WordScanner`
-Implements the Java `Iterator` interface. An iterator over Strings read in from file.
+Implements the Java `Iterator` interface. An iterator over Strings read in from file. This class has already been implemented for you.
 
 ### `OnDiskSort`
+
+![mockup](ondisksortmockup.png)
 
 We have provided you with a skeleton class `OnDiskSort` class that you will need to fill in the details for. We encourage you to add additional private methods, but do not change the names or parameters of the methods we have provided you. This will make our life much easier when we grade
 the assignment. As an aside, we have made some of the methods protected where normally we would have made them private to, again, assist us in grading.
@@ -89,7 +91,9 @@ to read King’s “I have a dream” speech. Finally it calls the `sort` method
 To assist you, we have also provided a few helper methods in the `OnDiskSort` class that you may find
 useful. They primarily do some simple operations with files. If there is any confusion about what these
 methods do, please come talk to us. In addition, these helper methods may also help you understand basic
-Java file I/O.
+Java file I/O. For more on file I/O, you can also see **Appendix A - File I/O in Java**
+
+
 
 ## Getting started
 
@@ -101,6 +105,10 @@ in the same directory as the `.class` files from your program. (If not, then the
 and it will crash!) See the main method of `OnDiskSort` for the names. Note that we may test your
 code using a different directory for temporary files, so your code shouldnt use the name sorting run
 except in its main method as a default value.
+
+3. See **Appendix A - File I/O in Java** and **Appendix B - The file system** for some background on the project.
+
+4. Start working on the methods in `OnDiskSort`. Try to understand how they each fit together before beginning work on them. My recommended order for the methods is the one presented in the **Classes** section, though you can jump around and work on various other pieces if you are stuck on one method.
 
 
 ## Grading
@@ -139,7 +147,7 @@ This is optional and you do not have to do it!
 If you do this, we strongly suggest making a new method (i.e. don’t delete your original `mergeFiles`
 method, just rename is to something like `mergeFilesLinear`).
 
-### Appendix A: File I/O in Java:
+### Appendix A - File I/O in Java:
 
 For those that haven’t had any file I/O experience in Java, we’ll give a brief intro here, but also take a look at the streams cheat sheet available off of the course Documentation page. You can also look
 up information about the classes seen in the code and discussed here via the Java libraries link there. For most I/O, you’ll need to `import java.io.*`.
@@ -156,7 +164,7 @@ To write data, you can create a new writer by:
 
 In both cases, you will need to surround these with a try-catch to handle the `IOException`.
 
-### Appendix B: The file system
+### Appendix B - The file system
 
 The file system on these computers starts at the very base directory of `/`. Everything is then expanded
 out based on directories. For example `/home/apapoutsaki/` is two directories starting from the base, first
