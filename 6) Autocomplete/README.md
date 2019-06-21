@@ -2,8 +2,8 @@
 
 ## Important Dates
 
-* Release Date: November 4, 2018
-* Due Date: November 11, 2018
+* Release Date: October 29, 2019
+* Due Date: November 5, 2019
 
 
 ## Description
