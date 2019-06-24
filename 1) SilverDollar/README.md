@@ -12,16 +12,18 @@
 * Gain experience testing for errors and writing code that handles edge cases.
 
 ## Key Terms and Concepts
-* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook).
+* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook and the lecture slides).
 * Inner classes - A class which is a member of another class (See [Java documentation](https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html)).
 * `EventListener` - A function in code that waits for an event to occur, such as a key press or mouse click, before triggering a response (See  [Java documentation](https://docs.oracle.com/javase/tutorial/uiswing/events/intro.html)).
 * Edge cases - A possible scenario of user input which requires a specific or non-standard response from the code, such as a user clicking out of bounds or attempting an illegal move.
 
 
 ## Overview
-The goal of this assignment is to create a graphical version of the Silver Dollar game. Read Section 3.10 of the textbook Java Structures for a description of the game. In this version of the game, the user will use the mouse to move the coins instead of typing commands on the keyboard. Your game must respond correctly to any and all forms of user input, never allowing the rules or structure of the game to be broken.
+The goal of this assignment is to create a graphical version of the Silver Dollar game. See **Appendix A - Rules** for more information on the specifics of the game. In this version of the game, the user will use the mouse to move the coins instead of typing commands on the keyboard. Your game must respond correctly to any and all forms of user input, never allowing the rules or structure of the game to be broken.
 
 Be sure to read over the entirety of this document and the code, including the classes already implemented for you, before beginning work on the code. This will help you better understand the tools provided and the parameters required for this project.
+
+`Coin` and `CoinSquare` have already been implemented for you. You are responsible for `GraphicsCoinStrip`, which has been partially implemented. 
 
 The correctness of the assignments in this class will be automatically verified. For this reason, you must follow all naming conventions specified in this assignment.
 
@@ -48,6 +50,7 @@ After you have a working copy of the game, write a method in this class that che
 3. Create a new Java project in Eclipse named Assignment01. Change the path to the git repository.
 4. Look closely at the classes and methods that have been provided already. In this case, these are the `Coin` and `CoinSquare` classes. Figure out what they do, what methods they have available, and how these methods might be useful to your code.
 5. You are now ready to get started! This assignment asks you to fill in the constructor and add the appropriate methods in the `GraphicsCoinStrip` class to play the game. As much as possible, try and develop incrementally. That is, get one small piece working and then move on to another piece. Don't forget to push your code to Github as you go.
+6. Make sure to edit your assignment.json with your name.
 
 ## Helpful Considerations
 * Breaking the rules - What happens when the user attempts to make an illegal move? Keep in mind that the user has much more power over your program than in the text iteration, as they have full control of the mouse to click or drag coins anywhere. Make sure that the user cannot break the rules of the game, or, even worse, break your program entirely.
@@ -87,3 +90,9 @@ A comment for each method describing what the method does. This comment should d
 `@param`, `@return` and `@throws` tags for each method (when appropriate)
 `pre-` and `post`- conditions as appropriate
 Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline.
+
+### Appendix A - Rules
+
+In the silver dollar game, your objective is to move all the coins to the left side. Coins can be moved multiple squares at a time, and only to the left. Coins cannot jump over each other, nor can they occupy the same square as another coin. The coins start in random positions along the strip.
+
+The game is over when all the coins are next to each other starting in the far left square.

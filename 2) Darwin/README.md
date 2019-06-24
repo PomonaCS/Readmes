@@ -2,6 +2,8 @@
 
 ## Important Dates
 
+### This is a pair assignment! Feel free to work with a partner.
+
 * Release Date: September 17, 2019
 * Due Date: October 1, 2019
 
@@ -17,7 +19,7 @@ representational details.)
 ## Key Terms and Concepts
 
 * `JUnit` - A unit testing framework where tests are written for each method in a class, each with their own assertions about what the result should be in order to test cases (See [documentation](https://junit.org/junit5/) for more, and [here](https://www.qualitestgroup.com/resources/knowledge-center/how-to-guide/set-junit-eclipse/) for information about JUnit and eclipse).
-* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook).
+* `ArrayList` - An ArrayList is a resizable array-like data structure, where items can be added and removed regardless of the initialized size (See 1.3 pg. 136 in the textbook and the lecture slides for more).
 * `Matrix` - A grid made of rows and columns, in this case implemented with ArrayLists of ArrayLists.
 * Modular decomposition - In this case, the concept of breaking a complex coding problem into individual parts which each serve their own purposes and interlock with each other.
 
@@ -64,7 +66,7 @@ to see if your program is working.
 `Rover`: This creature walks in straight lines until it is blocked, infecting any enemy creature it sees. If it
 can’t move forward, it turns.
 
-You should also create your own creature by creating a data file in the format described in Appendix A.
+You should also create your own creature by creating a data file in the format described in **Appendix A**.
 
 ## Classes
 
@@ -109,7 +111,7 @@ locations, pointing in random directions.
 
 ## Getting started
 
-1. Follow the same steps with the first lab/assignment to clone the github repository for this assignment.
+1. Follow the same steps with the first lab/assignment to clone the github repository for this assignment. However, if you want to work with a partner, create a team for them to join. If you partner has already created a team, simply join their team. Now you should have a joint GitHub repository that you can both push and pull from. Make sure to do the work on one computer at a time, pushing when you are finished, so that you don't have conflicts. 
 
 2. You can double click on `DarwinTest.jar` to run the sample solution. This will give you a chance to see
 how the program is supposed to behave. It should prompt you to open creature files. Select at least
@@ -153,6 +155,8 @@ correctly. Test `ifenemy`, `infect`, etc.
 
 10. Design and test your own creature for the competition! Think about what it could do to set itself apart and succeed over other creatures.
 
+11. Make sure you fill out the assignment.json file with **your name**, the name of your **collaborator**, and a description of **extra credit**.
+
 ## Helpful Considerations
 
 * Incremental testing - One of the main advantages of segmented programs, especially object oriented ones, is their ability to be developed and tested piece by piece. Test classes individually, not altogether. This will help you verify that each piece works and avoid a situation where some unknown is broken. What does it take to convince yourself that your code is correct? What edge cases should you make sure to test? How might something break?
@@ -188,8 +192,7 @@ You may not have one person work on it for a while, for example, and then have a
 and try to fix errors. Thus if you are going to work on it with another student you should make sure that
 you can find significant periods of time in which you can work together.
 
-2. Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to set the
-`“ec”` field to true if you did extra credit.
+2. Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to put a description of the extra credit if you did extra credit.
 
 3. You must include in your submission a species of your own design in a file named it `lastNameOfFirstStudent_lastNameOfSecondStudent.txt`.
 It can be as simple or as complex as you like, but must use only the instructions specified above for

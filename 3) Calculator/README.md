@@ -5,7 +5,6 @@
 * Release Date: October 1, 2018
 * Due Date: October 8, 2018
 
-
 ## Learning Goals
 
 * Gain practice using the Stack data structure.
@@ -15,9 +14,9 @@
 
 ## Key Terms and Concepts
 
-* Stacks - A data structure like a stack of plates where only the top element can be modified, either by peeking at it, removing it, or adding another element on top of it (See 1.3 pg. 127 in the textbook)
+* Stacks - A data structure like a stack of plates where only the top element can be modified, either by peeking at it, removing it, or adding another element on top of it (See 1.3 pg. 127 in the textbook and the lecture slides)
 * ActionListener - An interface that allows for the creation of objects that respond to user input and produce a signal (See https://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html for Java documentation)
-* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See **Appendix A - Postfix Notation** for more on postfix notation and lecture slides.
+* Postfix Notation - A form of mathematical notation where the operator comes after the operands, e.g. 3 5 + instead of 3 + 5. See **Appendix A - Postfix Notation** for more on postfix notation and the lecture slides.
 
 ## Description
 
@@ -112,6 +111,8 @@ implemented. Feel free to add additional unit tests to the `StateTest` class to 
 nice by modifying the button layout code in the `Calculator` class, add an appropriate listener (created from `OpButtonListener` if you like), and make sure that the state
 knows how to handle that operation.
 
+6. Make sure you fill out the assignment.json file with **your name** and a description of **extra credit**.
+
 ## Helpful Considerations
 * Stack & Postfix - As you might have noticed, the stack data structure works nicely with postfix notation, as you can take elements off the top and use them after an operation is called to the calculator. Why is a stack especially helpful here? Where else in programming might a stack be useful? What are the potential limitations of using a stack here?
 * Additional features - Which features and operations would be most simple to implement in this calculator? Which might be more complex? Why is this? For instance, consider that operations which can work on a single element carry their own set of special circumstances.
@@ -141,8 +142,7 @@ NOTE: Code that does not compile will not be accepted! Make sure that your code 
 
 ## Submitting your work
 
- Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to set the
-`“ec”` field to true if you did extra credit.
+ Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to add a description of your extra credit if you completed it. 
 
 ## Extra credit
 
