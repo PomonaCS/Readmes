@@ -15,7 +15,7 @@
 ## Key Terms and Concepts
 
 * `DoublyLinkedList` - A list consisting of nodes that each contain an item and a pointer to the node ahead and behind them. This means the list has minimal structure and instead consists of individual elements strung together. (See 1.3 pg. 142-153 in the textbook and the lecture slides for more).
-* `Association` - A data structure containing a key and a value together. This allows for two pieces of data to be "associated" and referenced together, and can be useful for storing certain information. 
+* `Association` - A data structure containing a key and a value together. This allows for two pieces of data to be "associated" and referenced together, and can be useful for storing certain information.
 * Compression - A very useful technique where large amounts of data is efficiently stored to reduce the space it takes up, through encoding or other methods. (See 5.5 pg. 810 in the textbook and **Appendix A - Compression** for more)
 
 ## Description
@@ -46,9 +46,12 @@ This assignment asks you to apply this technique to a drawing program, where ind
 
 ## Classes
 
-### `RowOrderedPosn`
+This assignment has 7 classes. You are responsible for `CurDoublyLinkedList` and `CompressedTable`. The first of these is the underlying data structure, a doubly linked list that includes a pointer, and the second is the class which handles the updating of the grid. You are also responsible for testing `CurDoublyLinkedList` with JUnit tests. The other classes have all been implemented for you.
 
 ![Drawing Grid](compressedtablemockup.png "Drawing Grid")
+
+
+### `RowOrderedPosn`
 
 The `RowOrderedPosn` class represents a single entry in a row-ordered table. The constructor takes four
 parameters: the row of the entry in the table, the column of the entry in the table, the total number of rows
@@ -155,6 +158,9 @@ then stop and test it instead of writing all of the code for a class and only af
 better is to write all of your test in `JUnit` before you write the code and then slowly turn the red to
 green!
 
+5. Make sure you fill out the assignment.json file with **your name** and a description of **extra credit**.
+
+
 ## Helpful Considerations
 
 * Bug hunting - This is a complex project where many things can go wrong. It is more likely than not that there will be large bugs, even late into the project. Try to identify where these bugs are coming from - often, there is an issue with `CurDoublyLinkedList` that is causing them but it is difficult to see as you are working on an entirely different piece. How can we test incrementally to try to stop these bugs from occurring? What's a good way to identify the source of a problem?
@@ -188,8 +194,7 @@ NOTE: Code that does not compile will not be accepted! Make sure that your code 
 
 ## Submitting your work
 
- Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to set the
-`“ec”` field to true if you did extra credit.
+ Double-check that your work is indeed pushed in Github! It is your responsibility to ensure that you do so before the deadline. Don't forget to commit and push your changes as you go and to edit the provided `json`. In particular, don't forget to add a description of your extra credit if you completed it.
 
 ## Extra credit
 

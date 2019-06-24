@@ -5,43 +5,28 @@
 * Release Date: October 29, 2019
 * Due Date: November 5, 2019
 
+## Key Terms and Concepts
 
 ## Description
 
-This week, we will be exploring a phenomenon found on many web search pages. Bring up your favorite
-web browser and start typing a phrase in the search bar. As you type, suggested completions will appear.
-When you find a completion you like for the prefix you have typed, you can just select it and a page will be
-brought up with the results corresponding to the phrase you selected. This phenomenon appears on other
-search sites as well. If you go to netflix.com, click on the search icon, and then start typing, it will suggest a
-variety of completions that correspond to movies in its database. Eclipse will helpfully suggest completions
-as you are typing in Java code. Even you cell phone will suggest completions when you are typing in a text
-message.
+This week, we will be implementing a program which autocompletes phrases. After you type a phrase, common words and phrases beginning with what you typed will appear, allowing you to save time by selecting a suggested term.
 
-If you try this several times, you will find that this kind of search has some interesting properties. First,
-only a limited number of completions are displayed. That should make sense to you. Suppose you have
-typed only a few letters. If there were no limitations on completions displayed the system would end up
-displaying hundreds of thousands of possible completions. Given that only a limited number of completions
-are displayed, how do you decide which ones to display? This is a difficult question for all searches.
-For an early (and influential) answer, see the paper ["The Anatomy of a
-Large-Scale Hypertextual Web Search Engine"]( http://ilpubs.stanford.edu:8090/361/) by Brin and Page, founders of Google.
+This autocomplete will only display a limited number of completions. Otherwise, the user would see an unmanageable number of possibilities and the autocomplete would be more confusing than useful. To see more on how to decide which results to display, see **Appendix A - Which Results to Display**. However, this is not directly relevant for this assignment.  
 
-Typically, the application depends on some historical data on how often certain completions are chosen,
-and each completion is associated with a number representing its frequency or likelihood of being chosen.
-(We did something like this earlier in the semester in Assignment 2, when you gathered information on the
-occurrence of triplets of words occurring in a text and then generated new text.)
-
-For this assignment, we will assume that you are given a file with keys and associated weights. You will then
+For this assignment, you are given a file with keys and associated weights. These weights describe how frequently the result is displayed, and will determine which you display. You will then
 read in the given information and suggest completions when the user types in a prefix. The original file will
 be sorted by the keys. When a query is given, you will find all the keys that start with the query, sort the
 matching terms by weight, and then report out the top entries.
 
-## Notes
+## Classes
 
-1. Familiarize yourself with the template files before starting to work on your assignment. Every class you write should either have
-an associated `JUnit` test file or have a `main` method that can be used to test that all the methods work
-correctly. Part of your grade on this assignment will be based on how complete your tests are.
+### `AutocompleteInterface`
 
-2. Write a class `Term` to represent a pair of a `key` (represented as a `String`) and a `weight` (represented
+This class provides the interface for Autocomplete. You can use it to see the signature of the method. 
+
+### `Term`
+
+Write a class `Term` to represent a pair of a `key` (represented as a `String`) and a `weight` (represented
 as a `long` – the frequencies can be large!). The objects generated should be immutable (no changes
 allowed to the `key` or `weight` fields).
 
@@ -59,7 +44,9 @@ other classes. We suggest you build a small `ArrayList` of `Terms` and then sort
 ways using the comparators returned by the static methods. Feel free to use the built-in static `sort`
 method in `Collections`. See the `Java` documentation for details.
 
-3. Next you should implement class `BinarySearchForAll`. This is an unusual class in that it has no
+### `BinarySearchForAll`
+
+Next you should implement class `BinarySearchForAll`. This is an unusual class in that it has no
 instance variables and only provides two static public methods to find elements in a list. The first
 finds the index of the first element in a list that equals (according to the comparator) the key. The
 second finds the index of the last equaling (according to the comparator) the key. This will allow us
@@ -71,7 +58,8 @@ match. Instead, see if compare `returns` a 0. The problem that we have is that t
 comparator we would be using for comparing terms then we could override `equals`, but in this case we will use different
 comparators at different times.
 
-```/**
+```
+    /**
     * Returns the index of the first element in aList that equals key
     *
     * @param aList
@@ -100,10 +88,11 @@ comparators at different times.
 ```
 
 
-4. `Autocomplete`: This class will use `Term` and `BinarySearchForAll` to find all of the terms that match
-a given prefix and to return them in a list held in descending order by weight. The constructor of the class should take in a `List<Term>` and sort it according to the keys of the terms. Don’t forget to the list returned should be sorted in descending order by weight!
 
-    We have provided an interface `AutocompleteInterface` that your class should implement.
+### `Autocomplete`
+
+This class will use `Term` and `BinarySearchForAll` to find all of the terms that match
+a given prefix and to return them in a list held in descending order by weight. The constructor of the class should take in a `List<Term>` and sort it according to the keys of the terms. Don’t forget to the list returned should be sorted in descending order by weight! We have provided an interface `AutocompleteInterface` that your class should implement.
 The class has only a
 single method:    
 
@@ -116,7 +105,9 @@ single method:
     List<Term> allMatches(String prefix);
 ```
 
-5. Finally, you should write a static `main` method in a class `AutocompleteMain` that takes two runtime
+### `AutocompleteMain`
+
+Finally, you should write a static `main` method in a class `AutocompleteMain` that takes two runtime
 parameters. The first is an `int` that determines how many matching items should be printed in
 response to a query, while the second is the name of the file holding the weights and keys. The file’s
 first line will be an `int` specifying the number of lines of data in the file. All subsequent lines will
@@ -153,16 +144,11 @@ The matching items are:
 Enter a new prefix:
 ```
 
-6. **Performance** The method `Collections.sort` is a modified merge sort that is guaranteed to be `O(n log n)` in the worst case. Your methods should be efficient. In particular, assuming comparisons
-between terms takes constant time, your binary search methods should be `O(log n)`. The `allMatches`
-method in `Autocomplete` should take time `O(log n + m log m)` if the big list has `n` elements and
-there are `m` matching terms.
+## Getting started
 
-Of course your program should not crash on any reasonable input (though if you try to read a nonexistent
-file, you can print an error message and terminate).
+## Helpful Considerations
 
-
-7. Answer the following thought questions in the comments at the top of class `AutocompleteMain`. While
+Answer the following thought questions in the comments at the top of class `AutocompleteMain`. While
 the answers won’t affect your grade on this project, you will find it useful to contemplate them. Please post your answers to the second part of the last question in Piazza so that everyone can enjoy them.
 But don’t reveal the name of the film!
 
@@ -195,3 +181,16 @@ Acknowledgment: This assignment is based on a similar exercise developed by Matt
 ## Extra credit
 If you would like some extra credit, create a GUI version of the program that pops up a window, allows
 the user to select the number of matches to be returned and the file to be used, and then uses a `JComboBox` to get input from the user and display the matches.
+
+### Appendix A - Which Results to Display
+
+Suppose you have typed only a few letters. If there were no limitations on completions displayed the system would end up
+displaying hundreds of thousands of possible completions.
+
+Given that only a limited number of completions
+are displayed, how do you decide which ones to display? This is a difficult question for all searches.
+For an early (and influential) answer, see the paper ["The Anatomy of a
+Large-Scale Hypertextual Web Search Engine"]( http://ilpubs.stanford.edu:8090/361/) by Brin and Page, founders of Google.
+
+Typically, the application depends on some historical data on how often certain completions are chosen,
+and each completion is associated with a number representing its frequency or likelihood of being chosen.
