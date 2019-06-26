@@ -7,6 +7,10 @@
 
 ## Key Terms and Concepts
 
+* `Comparators`
+* Java lambda expressions
+*
+
 ## Description
 
 This week, we will be implementing a program which autocompletes phrases. After you type a phrase, common words and phrases beginning with what you typed will appear, allowing you to save time by selecting a suggested term.
@@ -16,13 +20,13 @@ This autocomplete will only display a limited number of completions. Otherwise, 
 For this assignment, you are given a file with keys and associated weights. These weights describe how frequently the result is displayed, and will determine which you display. You will then
 read in the given information and suggest completions when the user types in a prefix. The original file will
 be sorted by the keys. When a query is given, you will find all the keys that start with the query, sort the
-matching terms by weight, and then report out the top entries.
+matching terms by weight, and then print the top entries.
 
 ## Classes
 
 ### `AutocompleteInterface`
 
-This class provides the interface for Autocomplete. You can use it to see the signature of the method. 
+This class provides the interface for Autocomplete. You can use it to see the signature of the method you need to implement. Autocomplete should implement this interface, and it basically serves as a suggestion for how this class should work.
 
 ### `Term`
 
@@ -176,7 +180,6 @@ You will be graded based on the following criteria:
 
 NOTE: Code that does not compile will not be accepted! Make sure that your code compiles before submitting it.
 
-Acknowledgment: This assignment is based on a similar exercise developed by Matthew Drabick and Kevin Wayne at Princeton University.
 
 ## Extra credit
 If you would like some extra credit, create a GUI version of the program that pops up a window, allows
@@ -194,3 +197,5 @@ Large-Scale Hypertextual Web Search Engine"]( http://ilpubs.stanford.edu:8090/36
 
 Typically, the application depends on some historical data on how often certain completions are chosen,
 and each completion is associated with a number representing its frequency or likelihood of being chosen.
+
+Acknowledgment: This assignment is based on a similar exercise developed by Matthew Drabick and Kevin Wayne at Princeton University.
