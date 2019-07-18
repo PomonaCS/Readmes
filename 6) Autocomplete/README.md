@@ -7,9 +7,9 @@
 
 ## Key Terms and Concepts
 
-* `Comparators`
-* Java lambda expressions
-*
+* `Comparators` - An interface used to order objects in Java. For Java objects that do have an inherent order like `int`s and `String`s, you can implement this interface to let the program know how they should be ordered. (See 2.5, 339-352 and the lecture slides in the textbook for more)
+* Java lambda expressions - A way to express simple functional interfaces in Java. Basically allows you to define a shorter functional interface in what is otherwise an object oriented language. (See [here](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) and the slides for more)
+* Autocomplete - A system where a program identifies likely results based on a prefix typed by the user.
 
 ## Description
 
@@ -26,7 +26,7 @@ matching terms by weight, and then print the top entries.
 
 ### `AutocompleteInterface`
 
-This class provides the interface for Autocomplete. You can use it to see the signature of the method you need to implement. Autocomplete should implement this interface, and it basically serves as a suggestion for how this class should work.
+This class provides the interface for `Autocomplete`. You can use it to see the signature of the method you need to implement. `Autocomplete` should implement this interface, and it basically serves as a suggestion for how this class should work.
 
 ### `Term`
 
@@ -34,16 +34,16 @@ Write a class `Term` to represent a pair of a `key` (represented as a `String`) 
 as a `long` – the frequencies can be large!). The objects generated should be immutable (no changes
 allowed to the `key` or `weight` fields).
 
-    The class should implement the interface `Comparable<Term>`, and thus it must include the `compareTo` method. It should also override the `toString` method so you can see the `key` and `weight` of the term.
+The class should implement the interface `Comparable<Term>`, and thus it must include the `compareTo` method. It should also override the `toString` method so you can see the `key` and `weight` of the term.
 
-    We also ask you to implement two static methods that return `Comparators`. These can be static because they don’t depend on the instance variables of the `Term`. They return `Comparators` that can be used to compare any two `Terms`. The first method, `byReverseWeightOrder` should return a comparator that has a `compare` method that ignores the `key`
-    field, but compares the `weights` in reverse order by size. That is, if used in a sort, terms with higher weight would occur before those elements with smaller weight.
+We also ask you to implement two static methods that return `Comparators`. These can be static because they don’t depend on the instance variables of the `Term`. They return `Comparators` that can be used to compare any two `Terms`. The first method, `byReverseWeightOrder` should return a comparator that has a `compare` method that ignores the `key`
+field, but compares the `weights` in reverse order by size. That is, if used in a sort, terms with higher weight would occur before those elements with smaller weight.
 
-    The second static method, `byPrefixOrder(int r)`, returns a comparator with a `compare` method that only considers the first `r` characters of the `key` field, and represents the usual lexicographic order. Thus if `r` is 3, the term with `key` `"hello"` would come before `"hopper"`, but `"hello"` and `"help"` would be considered equal (because their first three characters are the same.
+The second static method, `byPrefixOrder(int r)`, returns a comparator with a `compare` method that only considers the first `r` characters of the `key` field, and represents the usual lexicographic order. Thus if `r` is 3, the term with `key` `"hello"` would come before `"hopper"`, but `"hello"` and `"help"` would be considered equal (because their first three characters are the same.
 
-    You may build the comparators in the static methods using anonymous classes or inner classes, but you will find it simpler if you use Java lambda expressions.
+You may build the comparators in the static methods using anonymous classes or inner classes, but you will find it simpler if you use Java lambda expressions.
 
-    Test the methods in this class thoroughly (using `JUnit` or a `main` method) before proceeding to the
+Test the methods in this class thoroughly (using `JUnit` or a `main` method) before proceeding to the
 other classes. We suggest you build a small `ArrayList` of `Terms` and then sort them in several different
 ways using the comparators returned by the static methods. Feel free to use the built-in static `sort`
 method in `Collections`. See the `Java` documentation for details.
@@ -150,16 +150,20 @@ Enter a new prefix:
 
 ## Getting started
 
+1. Follow the steps from previous assignments to copy the Github repository and start your project.
+
+2. Start working on this assignment in the order illustrated by the classes section. This project has many working pieces, and it is key to complete individual sections before linking them together.
+
+3. Begin with the `Term` class and move on when you have convinced yourself it is complete. If you encounter issues at any point, try to identify which class they are coming from.
+
+
 ## Helpful Considerations
 
-Answer the following thought questions in the comments at the top of class `AutocompleteMain`. While
-the answers won’t affect your grade on this project, you will find it useful to contemplate them. Please post your answers to the second part of the last question in Piazza so that everyone can enjoy them.
-But don’t reveal the name of the film!
+* Individual testing - In a project with so many different pieces fitting together, it is important that each works individually before they work together. How can you identify which piece is broken? How does each piece in this project fit with the other?
 
-    a. We had you use an `ArrayList` to hold the data in this program. Are there any reasons that it might be better or worse to use an array rather than `ArrayList`?
-    B. Rather than defining the (rather odd) new class `BinarySearchForAll` that consisted only of static methods, why didn’t we just subclass `ArrayList` and add the new methods to the subclass (leaving off the `ArrayList` parameters, of course)?
-    Hint: What parts of your program would have broken?
-    c. What movie does the name of this lab riff off of? (Hint: It was named the tenth best film in the sports genre by the American Film Institute.) Post another well known (preferably corny) line from this movie on Piazza for our entertainment. If all the good quotes are gone by the time you post, you may supply a corny quote from some other movie that the stars were in (together or apart).
+* Which data structure to use? - We had you use an `ArrayList` to hold the data in this program. Are there any reasons that it might be better or worse to use an array rather than `ArrayList`?
+
+* Program structure - Rather than defining the (rather odd) new class `BinarySearchForAll` that consisted only of static methods, why didn’t we just subclass `ArrayList` and add the new methods to the subclass (leaving off the `ArrayList` parameters, of course)? What parts of your program would have broken?
 
 ## Grading
 
