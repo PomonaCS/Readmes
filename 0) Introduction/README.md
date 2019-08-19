@@ -67,9 +67,23 @@ assignments and loops) to complete all of the methods so that they work correctl
    on your desktop, by typing the following commands:
 ```
 cd Desktop
-mkdir CS062_Workspace
+mkdir cs062
+chmod 700 cs062
+cd cs062
+mkdir workspace
 ```
-   after which an icon for the new folder should appear on your Desktop.
+   The effect of these commands are:
+   * Create a new directory for this course on your Desktop 
+     (Though you might prefer to create it within your Documents folder).
+   * Change the protection on this folder so that *only you* are able to access it.
+   * Within the new `cs062` folder, create a `workspace` folder, where
+     Eclipse will store all of the information associated with your projects.
+
+   Note that you could have achieved much of this by clicking through menus,
+   but it is valuable for you to learn to work directly with the shell:
+   * shell scripting is a powerful and commonly used programming language.
+   * the commands available from the shell are much more powerful than those
+     available with the *Finder* or other file access Graphical User Interfaces.
 
 2. If you do not already have a github account, go to github.com and
    [register a new personal user account](https://help.github.com/en/articles/signing-up-for-a-new-github-account).
@@ -79,6 +93,18 @@ mkdir CS062_Workspace
    you to a screen that gives you the opportunity to accept that inviation.
    Once you are a member of the course github group you will be able to
    access assignments and submit your solutions.
+
+   Go to the repo for this assignment (which should have also received by
+   email), and select the `Fork` option from the upper right hand corner 
+   of the repo information window.   You will be asked where you want
+   the fork to be placed.  Place it in the team for this course (so that
+   we can see and grade it).
+   
+   A few seconds later you will have a new repo that is a copy of
+   the assignment.  You can make changes to this copy.  Note that
+   there is (near the upper right hand corner) a `Clone of download`
+   button.  If you click it, you will be given a URL that can be 
+   used (below) to clone this repo to your local machine.
 
 4. Start Eclipse on your local machine.  It will ask you to choose
    a workspace.   You should browse to the workspace folder that you 
@@ -90,10 +116,11 @@ mkdir CS062_Workspace
    Scroll down to the `Git` sub-items, select the `Projects from Git`
    sub-item, and press the `Next` button.
 
-   FIX THIS STEP IS WRONG - WE WANT TO OPERATE IN A CLONED COPY
+   Select the `Clone URI` option, and *paste* the URL for your forked
+   copy of the master repo (for this assignment).  
+   You may find it most convenient to use the SSH version of that URL.
 
-   Select the `Clone URI` option, and *paste* the URL for the master
-   repo (for this assignment).  You will also have to add your Github user
+   You will also have to add your Github user
    name and password (which you have the option of telling Eclipse to
    remember).
 
