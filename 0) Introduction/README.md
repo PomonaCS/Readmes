@@ -91,17 +91,25 @@ mkdir workspace
 2. If you do not already have a github account, go to github.com and
    [register a new personal user account](https://help.github.com/en/articles/signing-up-for-a-new-github-account).
 
-3. You should have received an email invitation to join the github group
-   for this course.  If you follow the link in that message, it will take
-   you to a screen that gives you the opportunity to accept that invitation.
-   Once you are a member of the course github group you will be able to
-   access assignments and submit your solutions.
+3. You will receive an email invitation to join each lab.  Follow that
+   URL and you should see a message like:
 
-   Go to the repo for this assignment (which should have also received by
-   email), and select the `Clone or download` button on the right hand side of 
-   the action items.  It will give you a URL that can be used (below)
-   to clone a copy of this repo on your local machine.
+   ![Accept Invitation](images/accepted_invitation.png "Invitation Accepted")
    
+   Once you accept the invitation, you will be provided with a unique URL for
+   your (private) version of this project.  Click it.
+
+   ![Accepted Invitation](images/accepted_invitation.png "Invitation Accepted")
+
+   You will see a unique copy of your lab repository, something resembling:
+
+   ![Lab Repo](images/lab_repo.png "Typical Lab Repo")
+
+   Click on the green `Clone or download` button and copy the returned
+   HTTPS URL:
+
+   ![HTTPS_Clone](images/https_clone.png "HTTPS Clone")
+
 4. Start Eclipse on your local machine.  It will ask you to choose
    a workspace.   You should browse to the workspace folder that you 
    created above.  Eclipse will remember this selection
