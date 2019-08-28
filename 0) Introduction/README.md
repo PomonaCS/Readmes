@@ -150,7 +150,7 @@ mkdir workspace
 
    Select the `Existing local repository` option, and press the `Next` button.
    
-   Browse to the newly cloned repository in your CS062 workspace, and selectit.
+   Browse to the newly cloned repository in your CS062 workspace, and select it.
 
    After you have provided all of the required information, you will be
    able to click the `Finish` button.
@@ -194,8 +194,7 @@ mkdir workspace
    click `Open Git Staging View` in the bottom left-hand corner or the 
    `Git Staging` tab in the bottom window.
 
-   If you click `Open Git Staging View` or select the `Git Staging` tab 
-   for the bottom part of the Eclipse window, you will see a list of *Unstaged Changes* 
+   You should see a list of *Unstaged Changes* 
    (changes you have made but not yet *committed*).  
    If you highlight one (or more) of those files you can
    add a commit message (describing the changes you have made) and then
@@ -227,8 +226,8 @@ mkdir workspace
 ## Helpful Considerations
 
 * Saving your work - Make sure to commit and push your work to GitHub MULTIPLE TIMES throughout the process! Not only does this help us see your unique progress, but it ensures that you have frequent backups of your work.
-**AVOID** one big push at the end of your work. 
-This will make us suspicious about your work. 
+**AVOID** one big push at the end of your work.   
+We want to be able to see the progressive development process that you followed.
 
 ## Grading
 Your submission (in your own personal github repo) will be graded based on the following criteria:
