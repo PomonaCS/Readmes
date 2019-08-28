@@ -85,6 +85,9 @@ mkdir workspace
    * the commands available from the shell are much more powerful than those
      available with the *Finder* or other file access Graphical User Interfaces.
 
+   For more information on the advantages and design of Command Line Interfaces,
+   please see this paper on [CLI design](http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/supp/cli.html).
+
 2. If you do not already have a github account, go to github.com and
    [register a new personal user account](https://help.github.com/en/articles/signing-up-for-a-new-github-account).
 
