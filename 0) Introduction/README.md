@@ -90,22 +90,15 @@ mkdir workspace
 
 3. You should have received an email invitation to join the github group
    for this course.  If you follow the link in that message, it will take
-   you to a screen that gives you the opportunity to accept that inviation.
+   you to a screen that gives you the opportunity to accept that invitation.
    Once you are a member of the course github group you will be able to
    access assignments and submit your solutions.
 
    Go to the repo for this assignment (which should have also received by
-   email), and select the `Fork` option from the upper right hand corner 
-   of the repo information window.   You will be asked where you want
-   the fork to be placed.  Place it in the team for this course (so that
-   we can see and grade it).
+   email), and select the `Clone or download` button right hand side of 
+   the action items.  It will give you a URL that can be used (below)
+   to clone a copy of this repo on your local machine.
    
-   A few seconds later you will have a new repo that is a copy of
-   the assignment.  You can make changes to this copy.  Note that
-   there is (near the upper right hand corner) a `Clone of download`
-   button.  If you click it, you will be given a URL that can be 
-   used (below) to clone this repo to your local machine.
-
 4. Start Eclipse on your local machine.  It will ask you to choose
    a workspace.   You should browse to the workspace folder that you 
    created above.  Eclipse will remember this selection
@@ -116,13 +109,15 @@ mkdir workspace
    Scroll down to the `Git` sub-items, select the `Projects from Git`
    sub-item, and press the `Next` button.
 
-   Select the `Clone URI` option, and *paste* the URL for your forked
-   copy of the master repo (for this assignment).  
-   You may find it most convenient to use the SSH version of that URL.
+   Select the `Clone URI` option, and *paste* the URL you got in
+   step 3 above.
 
    You will also have to add your Github user
    name and password (which you have the option of telling Eclipse to
    remember).
+   You may find it most convenient to use the SSH version of that URL,
+   which allows you to use up-loaded authentication keys associated
+   with your account.
 
    Select `master` as the branch to be imported.
 
