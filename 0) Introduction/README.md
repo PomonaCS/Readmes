@@ -94,7 +94,7 @@ mkdir workspace
 3. You will receive an email invitation to join each lab.  Follow that
    URL and you should see a message like:
 
-   ![Accept Invitation](images/accepted_invitation.png "Invitation Accepted")
+   ![Accept Invitation](images/assignment_invitation.png "Accept this Assignment")
    
    Once you accept the invitation, you will be provided with a unique URL for
    your (private) version of this project.  Click it.
@@ -116,34 +116,49 @@ mkdir workspace
    and prompt it as a default (or in the list of Recent Workspaces)
    when you start Eclipse in the future.
 
-5. From the `File` item on the top menu bar, select `Import`.
+5. Clone your new github repo onto the machine where you are working.
+
+   ![Git View](images/git_view.png "Git View")
+
+   Click on `Clone a Git repository ` to see the following window appear
+
+   ![Source Git](images/source_git.png "Source Git")
+
+   Paste the URL you copied from Github. It will automatically populate the fields. 
+   Add your Github username and password. 
+   Make sure to check `Store in Secure Store` unless you want to re-enter your 
+   credentials every time you interact with the repository. 
+   Feel free to add a password hint if you consider it necessary, once prompted. 
+   (**Note:** If you have two-factor authentication enabled for your Github account, 
+   you will need to disable it prior to entering your credentials here)
+
+   ![Populate Source Git](images/populate_source_git.png "Populate Source Git")
+
+   Follow the Wizard by clicking `Next`. 
+   Make sure you choose your newly-created workspace as the destination before 
+   clickinging `Finish`. 
+   You will now see the repository appearing in your Git repositories.
+
+   ![Destination](images/destination.png "Destination")
+
+
+6. Create a new Eclipse project from the newly cloned repository.
+
+   From the `File` item on the top menu bar, select `Import`.
    Scroll down to the `Git` sub-items, select the `Projects from Git`
    sub-item, and press the `Next` button.
 
-   Select the `Clone URI` option, and *paste* the URL you got in
-   step 3 above.
-
-   You will also have to add your Github user
-   name and password (which you have the option of telling Eclipse to
-   remember).
-   You may find it more convenient to use the SSH version of that URL,
-   which allows you to use up-loaded *ssh* keys rather
-   than *username* and *password* for authentication.
-
-   Select `master` as the branch to be imported.
-
-   As a Destination, browse to the workspace directory that you 
-   created in above, and click the `Next` button.
-
-   Select `Import existing Eclipse projects` and click the `Next` button.
+   Select the `Existing local repository` option, and press the `Next` button.
+   
+   Browse to the newly cloned repository in your CS062 workspace, and selectit.
 
    After you have provided all of the required information, you will be
    able to click the `Finish` button.
-   Eclipse will make a clone of the selected project into your
-   current workspace, after which you should be able to view,
-   edit, build and run the included software.
+   Eclipse will browse the selected repo for project information, and
+   instantiate a new project (in the Package Explorer window),
+   after which you should be able to view, edit, build and run the included software.
 
-6. Edit the `Token.java` and `Bag.java` files to add the missing code (which
+7. Edit the `Token.java` and `Bag.java` files to add the missing code (which
    is indicated by **// TODO** comments).  If you are not yet sure how to code
    a particular type of statement (e.g. a Java `for` loop), Google for examples
    or ask the instructor for assistance.
@@ -163,25 +178,57 @@ mkdir workspace
 
 ## Submitting your work
 
-7. *Commit* your changes and *Push* them back to Github.
+8. *Commit* your changes and *Push* them back to Github.
    
-   If you select the `Git Staging` tab for the bottom part of the
-   Eclipse window, you will see a list of *Unstaged Changes* 
+
+   Make sure you edit the `.json` file you are given with every lab/assignment to include 
+   your username, your partner's username (if collaboration is allowed), and indicate 
+   if you did any extra credit work.
+
+   Right click on the repository and then click `Commit`.
+
+   ![Commit](images/commit.png "Commit")
+
+   Transfer all your files from `Unstaged Changes` to `Staged Changes`. 
+   If you don't see options for `Unstaged Changes` and `Staged Changes`, 
+   click `Open Git Staging View` in the bottom left-hand corner or the 
+   `Git Staging` tab in the bottom window.
+
+   If you click `Open Git Staging View` or select the `Git Staging` tab 
+   for the bottom part of the Eclipse window, you will see a list of *Unstaged Changes* 
    (changes you have made but not yet *committed*).  
    If you highlight one (or more) of those files you can
    add a commit message (describing the changes you have made) and then
-   click the `Commit` button.  You can make as many *commits* as you like.
-   It is common to do different *commits* for different sets of changes,
-   but they will only be on your local machine until you do a *Push* back
+   click the `Commit` button.  
+   You can make as many *commits* as you like.
+   It is common to do different *commits* for different sets of changes.
+   Provide a meaningful description of each commit.
+
+   These chanes will only be on your local machine until you do a *Push* back
    to the [origin](https://www.git-tower.com/learn/git/glossary/origin) on github.
+
+
+   ![Push](images/push.png "Push")
 
    When you click the `Push` (or `Commit and Push`) button, all committed
    changes will be pushed back to Github ... at which they will be saved
    and visible to us.  We will notice and grade your last on-time *commit*.
 
+   If you want to confirm that we can see your work, go to the URL that you were given 
+   on github. You should see the latest commit you pushed.
+
+
+   Submitting correctly is your responsibility, and if you forget to submit or 
+   submit unsuccessfully without following up, everyone will be unhappy. 
+
+   **Important:** The last commit you push by the due date is the one we will look at and grade.
+
+
 ## Helpful Considerations
 
 * Saving your work - Make sure to commit and push your work to GitHub MULTIPLE TIMES throughout the process! Not only does this help us see your unique progress, but it ensures that you have frequent backups of your work.
+**AVOID** one big push at the end of your work. 
+This will make us suspicious about your work. 
 
 ## Grading
 Your submission (in your own personal github repo) will be graded based on the following criteria:
