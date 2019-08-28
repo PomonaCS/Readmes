@@ -95,7 +95,7 @@ mkdir workspace
    access assignments and submit your solutions.
 
    Go to the repo for this assignment (which should have also received by
-   email), and select the `Clone or download` button right hand side of 
+   email), and select the `Clone or download` button on the right hand side of 
    the action items.  It will give you a URL that can be used (below)
    to clone a copy of this repo on your local machine.
    
@@ -115,9 +115,9 @@ mkdir workspace
    You will also have to add your Github user
    name and password (which you have the option of telling Eclipse to
    remember).
-   You may find it most convenient to use the SSH version of that URL,
-   which allows you to use up-loaded authentication keys associated
-   with your account.
+   You may find it more convenient to use the SSH version of that URL,
+   which allows you to use up-loaded *ssh* keys rather
+   than *username* and *password* for authentication.
 
    Select `master` as the branch to be imported.
 
